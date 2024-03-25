@@ -42,15 +42,24 @@
       <li>죽음의 공포가 없는 사람 20명</li>
       <li>마이클 타이슨</li>
     </ul>
-    <a href="page1.html">다음페이지</a>
+
     <body>
-      <select>
-        <option>호날두</option>
-        <option>메시</option>
-        <option>펠레</option>
-        <option>마라도나</option>
-      </select>
+      <form method="get" action="fake_server.php">
+        <label for="name">이름</label>
+        <input type="text" id="name" name="name">
+        <br>
+        <label for="age">나이</label>
+        <input type="number" id="age" name="age">
+        <br>
+        <label for="character">성격</label>
+        <textarea id="character" name="character"></textarea>
+        <br>
+        <!-- 클릭하면 입력 값들이 서버로 전송됩니다 -->
+        <input type="submit" value="전송">
+      </form>
     </body>
+
+    <a href="page1.html"><h1>다음페이지를 눌러주세요</h1></a>
 
 </html>
 
