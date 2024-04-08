@@ -2,9 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 p#jm{ font-family: 'Black Han Sans'; }
 
-@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Pen+Script&display=swap');
-p#jb{ font-family: 'Nanum Pen Script';}
-
 p{
     color: green;
   }
