@@ -1,0 +1,28 @@
+/* 파일명 : style.css */
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+p#jm{ font-family: 'Black Han Sans'; }
+
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Pen+Script&display=swap');
+p#jb{ font-family: 'Nanum Pen Script';}
+
+p{
+    color: green;
+  }
+  span{
+    color: blue;
+  }
+
+  .space{
+    color: skyblue;
+  }
+
+  #aa{
+    color: violet
+  }
+
+  <style>    p{ font-size: 18px; }
+
+  #abs{ font-size: 24px; }
+  #rel{ font-size: 150%; }
+  </style>
+
