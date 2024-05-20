@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>두 개의 선택지[2]</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: orchid; /* 연보라색 */
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 80%;
+            text-align: center;
+        }
+
+        header, main, footer {
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            display: block;
+            width: 200px; /* 변경된 너비 */
+            padding: 15px; /* 변경된 패딩 */
+            margin: 10px auto; /* 가운데 정렬 */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px; /* 변경된 폰트 크기 */
+            background-color: #fff; /* 버튼의 배경색을 흰색으로 변경 */
+            color: orchid; /* 버튼 텍스트의 색상을 연보라색으로 변경 */
+        }
+
+        button:hover {
+            background-color: #ddd;
+        }
+
+        #result {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>두 개의 선택지</h1>
+        </header>
+        <main>
+            <section>
+                <h2>당신의 선택은?</h2>
+                <button onclick="chooseOption('option1')">선택지 1</button>
+                <button onclick="chooseOption('option2')">선택지 2</button>
+            </section>
+            <section id="result" style="display: none;">
+                <h2>결과</h2>
+                <p id="selected-option"></p>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 두 개의 선택지. All rights reserved.</p>
+        </footer>
+    </div>
+    <script>
+        function chooseOption(option) {
+            const resultSection = document.getElementById("result");
+            const selectedOptionText = document.getElementById("selected-option");
+
+            if (option === 'option1') {
+                selectedOptionText.textContent = "당신은 선택지 1을 선택했습니다.";
+            } else if (option === 'option2') {
+                selectedOptionText.textContent = "당신은 선택지 2를 선택했습니다.";
+            }
+
+            resultSection.style.display = "block";
+        }
+    </script>
+</body>
+</html>
