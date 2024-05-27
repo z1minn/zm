@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>두 개의 선택지[2]</title>
+    <title>두 개의 선택지</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&display=swap" rel="stylesheet">
+
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: orchid; /* 연보라색 */
-            color: #fff;
+            font-family: 'Hahmlet', sans-serif;
+            background-color: oldlace; /* oldlace색 */
+            color: #000; /* 검정색 */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -16,7 +18,7 @@
         }
 
         .container {
-            width: 80%;
+            width: 40%;
             text-align: center;
         }
 
@@ -25,19 +27,20 @@
         }
 
         header h1 {
-            font-size: 24px;
+            font-size: 40px;
             margin-bottom: 10px;
         }
 
         section {
-            background-color: #fff;
-            padding: 20px;
+            background-color: #000; /* 검정색 */
+            color: #fff; /* 흰색 */
+            padding: 15px; /* 변경된 패딩 */
             border-radius: 10px;
             margin-bottom: 20px;
         }
 
         h2 {
-            font-size: 20px;
+            font-size: 30px;
             margin-bottom: 10px;
         }
 
@@ -49,9 +52,10 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 18px; /* 변경된 폰트 크기 */
+            font-size: 22px; /* 변경된 폰트 크기 */
+            font-family: 'Hahmlet', sans-serif; /* 버튼 글꼴 설정 */
             background-color: #fff; /* 버튼의 배경색을 흰색으로 변경 */
-            color: orchid; /* 버튼 텍스트의 색상을 연보라색으로 변경 */
+            color: #000; /* 버튼 텍스트의 색상을 검정색으로 변경 */
         }
 
         button:hover {
@@ -59,7 +63,8 @@
         }
 
         #result {
-            background-color: #f9f9f9;
+            background-color: #000; /* 검정색 */
+            color: #fff; /* 흰색 */
             padding: 20px;
             border-radius: 10px;
         }
@@ -68,36 +73,20 @@
 <body>
     <div class="container">
         <header>
-            <h1>두 개의 선택지</h1>
+            <h1>어떤 노래를 선호하나요?</h1>
         </header>
         <main>
             <section>
-                <h2>당신의 선택은?</h2>
-                <button onclick="chooseOption('option1')">선택지 1</button>
-                <button onclick="chooseOption('option2')">선택지 2</button>
+                <h2>선택</h2>
+                <button onclick="location.href='k -> hiphop.html'">신나는</button>
+                <button onclick="location.href='k -> idol.html'">잔잔한</button>
             </section>
             <section id="result" style="display: none;">
                 <h2>결과</h2>
                 <p id="selected-option"></p>
             </section>
+            
         </main>
-        <footer>
-            <p>&copy; 2024 두 개의 선택지. All rights reserved.</p>
-        </footer>
     </div>
-    <script>
-        function chooseOption(option) {
-            const resultSection = document.getElementById("result");
-            const selectedOptionText = document.getElementById("selected-option");
-
-            if (option === 'option1') {
-                selectedOptionText.textContent = "당신은 선택지 1을 선택했습니다.";
-            } else if (option === 'option2') {
-                selectedOptionText.textContent = "당신은 선택지 2를 선택했습니다.";
-            }
-
-            resultSection.style.display = "block";
-        }
-    </script>
 </body>
 </html>
