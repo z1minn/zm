@@ -3,89 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>두 개의 선택지</title>
-    <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&display=swap" rel="stylesheet">
-
+    <title>Two Choices</title>
     <style>
-        body {
-            font-family: 'Hahmlet', sans-serif;
-            background-color: oldlace; /* oldlace색 */
-            color: #000; /* 검정색 */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
 
         .container {
-            width: 40%;
-            text-align: center;
+            display: flex;
+            height: 100%;
         }
 
-        header, main, footer {
-            text-align: center;
+        .split {
+            flex: 1;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
         }
 
-        header h1 {
-            font-size: 40px;
-            margin-bottom: 10px;
+        .left {
+            background-image: url('https://www.0db.co.kr/files/attach/images/200/113/345/003/d67fd10ad090a96a3df07081da078120.gif'); /* 왼쪽 이미지 링크 */
+            background-size: cover;
+            background-position: center;
         }
 
-        section {
-            background-color: #000; /* 검정색 */
-            color: #fff; /* 흰색 */
-            padding: 15px; /* 변경된 패딩 */
-            border-radius: 10px;
-            margin-bottom: 20px;
+        .right {
+            background-image: url('https://mblogthumb-phinf.pstatic.net/MjAyMTAzMTZfNzcg/MDAxNjE1ODgzMTIwMTM2.VNTl69s2fDVo6COAAORRP_nWEYASfXA4SWV56Fy_c0Ag.AummkXDSp2DSPBTjGawWr9KDKHfokX5_npU5w4QG2T0g.GIF.caramelizedh/tenor%EF%BC%8D1.gif?type=w800'); /* 오른쪽 이미지 링크 */
+            background-size: cover;
+            background-position: center;
         }
 
-        h2 {
-            font-size: 30px;
-            margin-bottom: 10px;
-        }
-
-        button {
-            display: block;
-            width: 200px; /* 변경된 너비 */
-            padding: 15px; /* 변경된 패딩 */
-            margin: 10px auto; /* 가운데 정렬 */
-            border: none;
-            border-radius: 5px;
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* 불투명도 조절 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
             cursor: pointer;
-            font-size: 22px; /* 변경된 폰트 크기 */
-            font-family: 'Hahmlet', sans-serif; /* 버튼 글꼴 설정 */
-            background-color: #fff; /* 버튼의 배경색을 흰색으로 변경 */
-            color: #000; /* 버튼 텍스트의 색상을 검정색으로 변경 */
+            transition: background-color 0.3s;
+            color: white;
+            text-decoration: none;
         }
 
-        button:hover {
-            background-color: #ddd;
+        .overlay:hover {
+            background-color: rgba(0, 0, 0, 0.7);
         }
 
-        #result {
-            background-color: #000; /* 검정색 */
-            color: #fff; /* 흰색 */
-            padding: 20px;
-            border-radius: 10px;
+        .overlay h1 {
+            margin: 0;
+            font-size: 2em;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>어떤 노래를 선호하나요?</h1>
-        </header>
-        <main>
-            <section>
-                <h2>선택</h2>
-                <button onclick="location.href='w -> jpop.html'">신나는</button>
-                <button onclick="location.href='w -> pop.html'">잔잔한</button>
-            </section>
-            <section id="result" style="display: none;">
-                <h2>결과</h2>
-                <p id="selected-option"></p>
-            </section>
-        </main>
+        <div class="split left">
+            <a href="w -> jpop.html" class="overlay">
+                <h1>신나는</h1>
+            </a>
+        </div>
+        <div class="split right">
+            <a href="w -> pop.html" class="overlay">
+                <h1>잔잔한</h1>
+            </a>
+        </div>
     </div>
 </body>
 </html>
